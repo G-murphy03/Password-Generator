@@ -21,3 +21,7 @@ Within this challenge, we were required to use specific skills learnt in the pas
 - THEN the password is either displayed in an alert or written to the page
 
 This is the live URL: https://g-murphy03.github.io/Password-Generator/
+
+### Screenshots
+![Screenshot 1](/assets/images/Screenshot-1.png)
+![Screenshot 2](/assets/images/Screenshot-2.png)

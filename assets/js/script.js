@@ -1,13 +1,11 @@
 // Defining all the password criterias
-var lowerCasedCharacters ="abcdefghijklmnopqrstuvwxyz";
+var lowerCasedCharacters = "abcdefghijklmnopqrstuvwxyz";
 
-var upperCasedCharacters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var upperCasedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var specialCharacters ="#$%&()*+<=>?@";
+var specialCharacters = "#$%&()*+<=>?@";
 
 var numericCharacters = "0123456789";
-
-var combinedCharacters = "";
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -15,6 +13,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
   var characters = window.prompt("How many characters would you like your password to contain?")
+  var combinedCharacters = "";
   
   // if no characters then the function is closed
   if (!characters) {
@@ -46,7 +45,7 @@ function generatePassword () {
       combinedCharacters += upperCasedCharacters;
     }
     
-    // if nnone of the criteria are selected, reloop to start
+    // if none of the criteria are selected, reloop to start
     if (sC != true && nC != true && lC != true && uC != true) {
       alert("You must select at least one field");
       generatePassword();
@@ -54,7 +53,7 @@ function generatePassword () {
   }
 
   // finalPW that is generated is equal to a randomised verison of the combinedCharacters variable
-  var finalPW = " ";
+  var finalPW = "";
   for (i = 0; i < characters; i++) {
     finalPW += combinedCharacters.charAt(Math.floor(Math.random()*combinedCharacters.length));
   }
